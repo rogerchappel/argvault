@@ -1,21 +1,16 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to ArgVault will be documented in this file.
 
-This project follows the [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
-format and uses semantic versioning when versioned releases are published.
+This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) style and uses semantic versioning once releases begin.
 
-## [Unreleased]
+## [0.1.0] - 2026-05-15
 
 ### Added
 
-- Initial project setup.
-
-## Release Links
-
-- Unreleased:
-  `https://github.com/rogerchappel/argvault/compare/...HEAD`
-- Latest release:
-  `https://github.com/rogerchappel/argvault/releases/latest`
-
-Replace placeholder links once the first release tag exists.
+- Local-first `argvault` TypeScript CLI.
+- `init`, `record`/`scan`, `report`, and `doctor` commands.
+- Redacted cassette JSON with argv, cwd, env allowlist, stdin/stdout/stderr samples, exit status, duration, notes, and fixture hashes.
+- Markdown report rendering for handoffs.
+- Fixture-backed tests and smoke script.
+- Safety, orchestration, and configuration docs.
