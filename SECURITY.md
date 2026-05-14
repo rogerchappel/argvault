@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Replace this section with the supported versions for `argvault`.
+ArgVault is pre-1.0; security fixes target the latest release on `main` until formal version support is announced.
 
 Example:
 
