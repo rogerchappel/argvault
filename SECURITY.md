@@ -4,16 +4,6 @@
 
 ArgVault is pre-1.0; security fixes target the latest release on `main` until formal version support is announced.
 
-Example:
-
-```md
-| Version | Supported |
-| --- | --- |
-| .x | Yes |
-| < .0 | No |
-```
-
-If the project does not publish versioned releases yet, say that clearly.
 
 ## Reporting a Vulnerability
 
