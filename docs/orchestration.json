@@ -1,0 +1,22 @@
+{
+  "name": "argvault",
+  "schemaVersion": "openclaw.orchestration/v1",
+  "purpose": "Record redacted local CLI run cassettes for safe human and agent handoffs.",
+  "commands": {
+    "build": "npm run build",
+    "check": "npm run check",
+    "test": "npm test",
+    "smoke": "npm run smoke",
+    "validate": "bash scripts/validate.sh"
+  },
+  "artifacts": [
+    ".argvault/runs/*.json",
+    ".argvault/runs/*.md"
+  ],
+  "safety": {
+    "networkRequired": false,
+    "envCapture": "allowlist-only",
+    "redacts": ["home-path", "github-token", "openai-style-key", "key-value-secret", "private-key", "long-base64-ish"],
+    "ignoredPaths": [".git", "node_modules", "dist", "build", ".cache", "coverage"]
+  }
+}
