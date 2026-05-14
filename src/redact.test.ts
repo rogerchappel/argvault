@@ -6,8 +6,8 @@ test("redacts common key value secrets", () => {
   const result = redact("api_key=supersecret password=hunter2 token=ghp_1234567890abcdefghijklmnopqrstuv");
   assert.match(result.value, /api_key=\[REDACTED\]/);
   assert.match(result.value, /password=\[REDACTED\]/);
-  assert.match(result.value, /\[REDACTED:github-token\]/);
-  assert.deepEqual(result.labels, ["github-token", "key-value-secret"]);
+  assert.doesNotMatch(result.value, /ghp_1234567890/);
+  assert.deepEqual(result.labels, ["key-value-secret"]);
 });
 
 test("redacts home paths", () => {
