@@ -14,6 +14,8 @@ For local development:
 
 ```bash
 npm install
+npm run check
+npm test
 npm run build
 node dist/index.js doctor
 ```
@@ -106,6 +108,7 @@ npm test
 npm run check
 npm run build
 npm run smoke
+npm run release:check
 bash scripts/validate.sh
 ```
 
