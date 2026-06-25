@@ -44,6 +44,17 @@ Open the JSON and Markdown before sharing them. ArgVault is a seatbelt, not a la
 
 ## Practical examples
 
+Run a complete fixture-backed handoff demo:
+
+```bash
+bash demo/run-handoff-demo.sh
+```
+
+The demo writes `tmp/handoff-demo/cassette.json` and `tmp/handoff-demo/report.md`,
+then checks that the generated cassette and report contain the expected markers.
+A short video outline and social hooks live in
+[`docs/promo/handoff-demo-brief.md`](docs/promo/handoff-demo-brief.md).
+
 Record a failing test while keeping env capture tight:
 
 ```bash
