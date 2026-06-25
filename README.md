@@ -14,6 +14,8 @@ For local development:
 
 ```bash
 npm install
+npm run check
+npm test
 npm run build
 node dist/index.js doctor
 ```
@@ -43,6 +45,17 @@ Open the JSON and Markdown before sharing them. ArgVault is a seatbelt, not a la
 - `argvault doctor` checks the local workspace basics.
 
 ## Practical examples
+
+Run a complete fixture-backed handoff demo:
+
+```bash
+bash demo/run-handoff-demo.sh
+```
+
+The demo writes `tmp/handoff-demo/cassette.json` and `tmp/handoff-demo/report.md`,
+then checks that the generated cassette and report contain the expected markers.
+A short video outline and social hooks live in
+[`docs/promo/handoff-demo-brief.md`](docs/promo/handoff-demo-brief.md).
 
 Record a failing test while keeping env capture tight:
 
@@ -106,9 +119,34 @@ npm test
 npm run check
 npm run build
 npm run smoke
+npm run release:check
 bash scripts/validate.sh
 ```
 
 ## License
 
 MIT
+
+## Verification
+
+Run the release-readiness checks before publishing or cutting a PR:
+
+```bash
+npm run check
+npm run build
+npm run test
+npm run smoke
+npm run package:smoke
+npm run release:check
+```
+
+Use `npm run package:smoke` or `npm pack --dry-run` to confirm the published tarball includes the support docs and runnable package contents.
+
+## Release Verification
+
+Before publishing or tagging a release, run the local verification path that matches CI:
+
+- `npm run release:check`
+- `npm run package:smoke`
+
+The release checklist in `docs/release-readiness.md` captures the package surface, CLI bins, and reviewer notes for future release PRs.
