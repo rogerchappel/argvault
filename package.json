@@ -7,13 +7,21 @@
     "argvault": "./dist/index.js"
   },
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
   },
   "files": [
     "dist",
     "README.md",
-    "docs"
+    "docs",
+    "LICENSE",
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "CONTRIBUTING.md"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -33,6 +41,14 @@
   ],
   "author": "Roger Chappel",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogerchappel/argvault.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rogerchappel/argvault/issues"
+  },
+  "homepage": "https://github.com/rogerchappel/argvault#readme",
   "devDependencies": {
     "@types/node": "^25.0.0",
     "typescript": "^5.9.3"
