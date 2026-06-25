@@ -7,16 +7,20 @@
     "argvault": "./dist/index.js"
   },
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
   },
   "files": [
     "dist",
     "README.md",
     "docs",
     "LICENSE",
-    "SECURITY.md",
     "CHANGELOG.md",
+    "SECURITY.md",
     "CONTRIBUTING.md"
   ],
   "scripts": {
