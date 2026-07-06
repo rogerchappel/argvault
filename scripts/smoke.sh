@@ -7,6 +7,7 @@ mkdir -p "$tmp_dir"
 trap 'rm -rf "$tmp_dir"' EXIT
 
 cd "$repo_root"
+node dist/index.js --version
 node dist/index.js doctor
 node dist/index.js record \
   --out "$tmp_dir/cassette.json" \
