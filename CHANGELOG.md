@@ -4,6 +4,13 @@ All notable changes to ArgVault will be documented in this file.
 
 This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) style and uses semantic versioning once releases begin.
 
+## [Unreleased]
+
+### Added
+
+- CLI `--version` support for installed-package diagnostics.
+- Release smoke coverage that executes the package bin version command.
+
 ## [0.1.0] - 2026-05-15
 
 ### Added

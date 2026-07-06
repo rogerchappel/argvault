@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { createRequire } from "node:module";
 import path from "node:path";
 import { parseArgs, flag, flagMany, numberFlag } from "./args.js";
 import { doctor } from "./doctor.js";
@@ -7,8 +8,15 @@ import { initProject, loadConfig } from "./init.js";
 import { recordRun } from "./record.js";
 import { renderReport } from "./report.js";
 
+const require = createRequire(import.meta.url);
+
 export async function main(argv = process.argv.slice(2)): Promise<number> {
   const parsed = parseArgs(argv);
+  if (["--version", "-v", "version"].includes(parsed.command)) {
+    const pkg = require("../package.json") as { version: string };
+    console.log(pkg.version);
+    return 0;
+  }
   if (["help", "--help", "-h"].includes(parsed.command)) {
     console.log(help());
     return 0;
