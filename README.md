@@ -17,6 +17,7 @@ npm install
 npm run check
 npm test
 npm run build
+node dist/index.js --version
 node dist/index.js doctor
 ```
 
@@ -43,6 +44,7 @@ Open the JSON and Markdown before sharing them. ArgVault is a seatbelt, not a la
 - `argvault scan` is an alias for `record` for teams that prefer scan language.
 - `argvault report <cassette.json>` renders Markdown from a cassette.
 - `argvault doctor` checks the local workspace basics.
+- `argvault --version` prints the installed package version for support reports.
 
 ## Practical examples
 
