@@ -29,7 +29,7 @@
     "test": "node --test dist/**/*.test.js",
     "pretest": "npm run build",
     "smoke": "npm run build && bash scripts/smoke.sh",
-    "package:smoke": "npm run build && npm pack --dry-run",
+    "package:smoke": "npm run build && node scripts/verify-package-bin.mjs && npm pack --dry-run",
     "release:check": "npm run check && npm test && npm run build && npm run smoke && npm run package:smoke",
     "lint": "npm run check"
   },
